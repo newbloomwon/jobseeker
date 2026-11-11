@@ -1,0 +1,27 @@
+name: Report a problem
+description: Let the maintainer know when something does not work.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include resumes, contact information, application records, or other private data."
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+      description: List the steps that led to the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true

@@ -1,0 +1,29 @@
+name: Suggest an improvement
+description: Share an idea for helping job seekers save time.
+title: "[Suggestion]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "Please avoid posting resumes, contact details, or private application information."
+  - type: textarea
+    id: need
+    attributes:
+      label: What are you trying to do?
+      description: Describe the job-search task or problem.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would make it easier?
+      description: Describe the change you would suggest.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Other context
+      description: Optional examples or links to public information.
+    validations:
+      required: false
