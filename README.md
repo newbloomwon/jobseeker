@@ -6,11 +6,11 @@ A local-first job-search workspace for collecting leads, tracking applications, 
 
 Keep the source in a GitHub repository so you can review suggestions and update the app. Put **only the contents of this `shareable/` folder** in that repository; never publish the parent workspace, which has your private profile and application history.
 
-For the simplest beta, turn on GitHub Pages from the repository's `main` branch and root folder. Then share the Pages URL with the recruiter; they can pass it to job seekers. GitHub Pages has a soft 100 GB/month bandwidth limit and GitHub says it is not for free hosting of a commercial SaaS, so treat it as a testing option if the project may grow or become a service.
+GitHub Pages is configured through the included Actions workflow. After its first successful run, share `https://newbloomwon.github.io/jobseeker/` with the recruiter; they can pass it to job seekers. GitHub Pages has a soft 100 GB/month bandwidth limit and GitHub says it is not for free hosting of a commercial SaaS, so treat it as a testing option if the project may grow or become a service.
 
 For a growth path, connect the GitHub repository to Cloudflare Pages using its Git integration. For this plain HTML app, set the build command to `exit 0` and the output directory to the repository root (`.`). Cloudflare deploys after pushes and provides preview URLs for pull requests. Its current docs say static asset requests are free and unlimited; if the app adds server-side functions or accounts, those have separate usage limits and costs.
 
-Before the first commit, put the repository's `/issues/new/choose` URL in `window.JOBOPS_FEEDBACK_URL` in `index.html`. The app footer will then show **Suggest an improvement**. Review suggestions in GitHub Issues, edit the files, and push changes; the hosting service republishes the updated version.
+The app footer links to the repository's issue forms through `window.JOBOPS_FEEDBACK_URL` in `index.html`. Review suggestions in GitHub Issues, edit the files, and push changes; the hosting service republishes the updated version.
 
 The app files are easy to edit directly:
 
